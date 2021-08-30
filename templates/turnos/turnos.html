@@ -1,0 +1,43 @@
+{% extends 'appPrincipal/base.html' %}
+{% load static %}
+{% block title %}TURNOS{% endblock %}
+{% block content %}
+<section class="seccionturnos">
+    <h2 class="turnos-texto">¿Tu mascota no se siente bien?</h2>
+    <h3 class="turnos-texto1">¿Te interesa vacunarla?</h3>
+    <h3 class="turnos-texto2"><strong>¡Estamos para ayudarte!</strong></h3>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-turnos" data-toggle="modal" data-target="#exampleModal">
+        SACAR UN TURNO
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ELEGI UNA FECHA</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-contacto-col" id="contacto">
+                            <input type="text" name="nombre" required placeholder="Ingrese su nombre y apellido">
+                            <input type="email" name="email" required placeholder="Ingrese su email"><br><br>
+                            <input type="date" min="{{fecha}}" name="fecha" required>
+                            <textarea name="consulta" placeholder="Ingresa tu consulta" required></textarea>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

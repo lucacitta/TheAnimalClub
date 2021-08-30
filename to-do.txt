@@ -1,0 +1,7 @@
+LUCA
+Agregar el suscribirse al newsletter a todos los forms
+crear una base de datos donde se guarden los newsletter
+funcion de enviar datos a todos los del newsletter
+
+CAMI
+retocar formulario turnos y adoptar (perdon por el adoptar te lo deje asqueroso <3)

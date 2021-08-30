@@ -1,0 +1,58 @@
+{% extends 'appPrincipal/base.html' %}
+{% load static %}
+{% block title %}SERVICIOS{% endblock %}
+{% block content %}
+
+<section class="servicios">
+    <div class="container-portada">
+        <h2 class="portada-servicios">NUESTROS SERVICIOS</h2>
+    </div>
+</section>
+<section>
+    <div class="servicios-row">
+        <div class="servicios-column" data-aos="fade-right">
+            <img src="{% static 'img/medicine.svg' %}" alt="Icono Atención clínica general" width="30%">
+            <h3>Atención clínica general</h3>
+            <p>En nuestros horarios de atención siempre encontrarás un profesional para <b> realizar consultas, vacunas, cortes de uñas y el resto de los servicios que requiera tu mascota.</b> Contamos con microscopio para la realización de raspajes y tinciones, test oftalmológicos, monitores no invasivos y demás equipamiento para resolver 
+        las situaciones tanto de atención básica como de emergencia.</p>
+        </div>
+        <div class="servicios-column" data-aos="fade-left">
+            <img src="{% static 'img/doctor.svg' %}" alt="Icono Atención clínica especial" width="30%">
+            <h3>Atención clínica especial</h3>
+            <p>Así como sucede en medicina humana, los <b> veterinarios se especializan en la atención de ciertas patologías.</b> Nosotros contamos con especialistas en diferentes enfermedades o sistemas: dermatología, cardiología, oncología, endocrinología, oftalmología entre otras. De esta forma si tu mascota requiere 
+        una consulta con especialista se puede realizar en nuestros consultorios.</p>
+        </div>
+    </div>
+    <div class="servicios-row">
+        <div class="servicios-column" data-aos="fade-right">
+            <img src="{% static 'img/surgery.svg' %}" alt="Icono Cirugía" width="30%">
+            <h3 class="cirugia">CIRUGÍA</h3>
+            <p>La cirugía es el <b> arte de curar con las manos.</b> Entonces cualquier veterinario puede realizar un acto quirúrgico, sin embargo existen cirujanos veterinarios, quienes se especializan en la materia y realizan estudios y prácticas específicas para llegar a ese nombramiento. En The Animal Club la cirujana 
+        (especialista en Cirugía de Pequeños Animales) es la doctora Julieta Moretti, quien está a cargo del servicio de cirugía de la clínica.</p>    
+        </div>
+        <div class="servicios-column" data-aos="fade-left">
+            <img src="{% static 'img/medicine.svg' %}" alt="Icono Laboratorio" width="30%">
+            <h3 class="laboratorio">laboratorio</h3>
+            <p>Tenemos a disposición una serie de kits para la detección precoz de enfermedades (esto lo realizamos en nuestro consultorio), pero también contamos con el apoyo de un laboratorio que realiza estudios más complejos cuando tu mascota lo requiere. <b> Realizamos entonces análisis de sangre, de orina, de materia fecal, mediciones de hormonas 
+        y un sinfín de estudios</b> a través de nuestro laboratorio de confianza.</p>
+        </div>
+    </div>
+    <section class="servicios-row">
+        <div class="servicios-column" data-aos="fade-right">
+            <img src="{% static 'img/x-ray.svg' %}" alt="Icono Maquina rayos X" width="30%">
+            <h3 class="radiologia">RADIOLOGÍA</h3>
+            <p>Poseemos el servicio de radiología en nuestra veterinaria, de esta forma evitamos el traslado de los pacientes a otros centros facilitando el diagnóstico en un mismo lugar.</p>    
+        </div>
+        <div class="servicios-column" data-aos="fade-left">
+            <img src="{% static 'img/ultrasound.svg' %}" alt="Icono ecografia" width="30%">
+            <h3 class="ecografia">EcografÍa</h3>
+            <p>Contamos con un grupo de especialistas que concurren a nuestra clínica a la hora de realizar un estudio de ecografía.</p>    
+        </div>
+    </section>
+</section>
+
+{% endblock content %}
+
+
+
+

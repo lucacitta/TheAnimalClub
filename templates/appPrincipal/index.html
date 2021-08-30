@@ -1,0 +1,21 @@
+{% extends 'appPrincipal/base.html' %}
+{% load static %}
+{% block title %}THE ANIMAL CLUB{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-lg-12">
+                <section class="seccionprincipal">
+                    <h2>¡BIENVENIDO/A!</h2>
+                    <h3>¿En qué podemos ayudarte?</h3>
+                    <ul class="home-menu">
+                        <li><a href="{% url 'turnos' %}" class="home-links border1">Solicitar un turno</a></li>
+                        <li><a href="{% url 'petshop' %}" class="home-links border2"> Ir al Petshop </a></li>
+                        <li><a href="{% url 'servicios' %}" class="home-links border3">Consultar servicios</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

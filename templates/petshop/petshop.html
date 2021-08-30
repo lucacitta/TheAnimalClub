@@ -1,0 +1,91 @@
+{% extends 'appPrincipal/base.html' %}
+{% load static %}
+{% block title %}PETSHOP{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 petshop-titulo">
+            <h2>Bienvenid@ a <br><span class="txt-petshop">NUESTRO PETSHOP</span></h2>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <h2 class="featured-products">PRODUCTOS SELECCIONADOS</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div style="float: right; width: 15rem;">
+            {% if request.user.is_authenticated %}
+            {% include 'carro/widget.html' %}
+            {% else %}
+            <h4 style="background-color:794F00;color: black;">Debes iniciar sesion para realizar compras</h4>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row prod-row">
+        {% for producto in productos %}
+        <div class="prod-col">
+            <img src=" {{ producto.imagen.url }} " alt="Proplan puppy">
+            <h4>{{producto.nombre}}</h4>
+            <p>{{producto.precio}}</p>
+            <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al carro</a>
+        </div>
+        {% endfor %}
+        <div class="row prod-row">
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-PUPPY_2.png' %}" alt="Proplan puppy">
+                <h4>PURINA PRO-PLAN PUPPY 1kg</h4>
+                <p>$850</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-ADULTO_1.png' %}" alt="Proplan ADULT">
+                <h4>PURINA PRO-PLAN ADULT 1kg</h4>
+                <p>$950</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-ACTIVE-MIND_2_0.png' %}" alt="Proplan puppy">
+                <h4>PURINA PRO-PLAN ACTIVE MIND 1kg</h4>
+                <p>$980</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-REDUCE-CALORIE.png' %}" alt="Proplan puppy">
+                <h4>PURINA PRO-PLAN REDUCED CALORIES 1kg</h4>
+                <p>$1050</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+        </div>
+        <div class="row prod-row">
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-Sensitive-skin_2.png' %}" alt="Proplan puppy">
+                <h4>PURINA PRO-PLAN SENSITIVE SKIN 1kg</h4>
+                <p>$1150</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-DELICATE_1_0_1.png' %}" alt="Proplan ADULT">
+                <h4>PURINA PRO-PLAN DELICATE STRUCTURE 1kg</h4>
+                <p>$1250</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-ACTIVE-MIND_2_0.png' %}" alt="Proplan puppy">
+                <h4>PURINA PRO-PLAN ACTIVE MIND 1kg</h4>
+                <p>$1050</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+            <div class="prod-col">
+                <img src="{% static 'img/PURINA-PROPLAN-SECCION-PERROS-EXIGENT_1.png' %}" alt="Proplan puppy">
+                <h4>PURINA PRO-PLAN EXIGENT 1kg</h4>
+                <p>$850</p>
+                <input type="button" value="COMPRAR" class="btn-comprar">
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}
