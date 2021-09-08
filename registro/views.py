@@ -10,7 +10,7 @@ def register(request):
             new_user=authenticate(username=form.cleaned_data['username'],
             password=form.cleaned_data['password1'],)
             login(request,new_user)
-            return redirect ('/')
+            return redirect ('')
     else:
         form=UserRegisterForm()
     context={'registerForm':form}

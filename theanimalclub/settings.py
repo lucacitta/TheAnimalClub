@@ -135,7 +135,7 @@ EMAIL_PORT=587
 EMAIL_HOST_USER='lucacitta.python@gmail.com'
 EMAIL_HOST_PASSWORD='Mymamapython12'
 
-EMAIL_ADMIN=EMAIL_HOST_USER             #CAMBIAR POR EL EMAIL DEL ADMINISTRADOR
+EMAIL_ADMIN='lucacitta@gmail.com'             #CAMBIAR POR EL EMAIL DEL ADMINISTRADOR
 
 
 # configuracion de usuarios
